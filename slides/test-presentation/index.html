@@ -1,0 +1,51 @@
+---
+layout: slide
+title: Test presentation with reveal.js
+description: A presentation that uses reveal.js in Jekyll
+theme: black
+transition: slide
+---
+
+<section data-markdown>
+# reveal.js slides in Jekyll
+
+by [Brad Israel](http://www.bisrael8191.com)
+
+April 19, 2015
+</section>
+
+<section data-markdown>
+# Header 1
+
+## Header 2
+
+1. Numbered
+2. List
+
+### Header 3
+
+* Item 1
+* Item 2
+
+</section>
+
+<section data-markdown>
+Code highlighting:
+
+```javascript
+'use strict';
+
+var Hapi = require('hapi');
+
+var config = require('./config');
+var external = require('./plugins/externalPlugins');
+
+// Initialize Hapi REST server,
+// make the config file accessible to all
+// plugins using 'server.settings.app'
+var server = new Hapi.Server({
+  app: config
+});
+server.connection(server.settings.app.options);
+```
+</section>
